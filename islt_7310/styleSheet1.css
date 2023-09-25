@@ -1,0 +1,57 @@
+/* styleSheet1.css */
+
+/* Styling the body element */
+/* Styling headings */
+h1 {
+    color: #7f85a0;
+}
+
+.main-head {
+    grid-area: header;
+  }
+.main-img {
+    grid-area: img;
+  }
+  .content {
+    grid-area: content;
+  }
+  .navbar {
+    grid-area: nav;
+  }
+  .side {
+    grid-area: sidebar;
+  }
+  .ad {
+    grid-area: ad;
+  }
+  .main-footer {
+    grid-area: footer;
+  }
+
+  .wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+      "header"
+      "nav"
+      "img"
+      "content"
+      "sidebar"
+      "ad"
+      "footer";
+  }
+
+  @media (min-width: 700px) {
+    .wrapper {
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-areas:
+        "nav    nav     nav"
+        "header    content sidebar"
+        "img    content ad"
+        "footer footer  footer";
+    }
+    nav ul {
+      flex-direction: column;
+    }
+  }
+
